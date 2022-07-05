@@ -49,15 +49,22 @@ def upload_image():
         filename2 = secure_filename(file2.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         file2.save(os.path.join(app.config['UPLOAD_FOLDER'], filename2))
-        #print('upload_image filename: ' + filename)
+        # print('upload_image filename: ' + filename)
+        filename = 'static\\uploads\\' + filename
+        filename2 = 'static\\uploads\\' + filename2
+        # print(filename, filename2)
 
         flash('Image successfully uploaded and displayed below')
-        return " "  # render_template('test.html')  # , filename=filename
+        # , filename=filename
+        return render_template('test.html', filename=str(filename), filename2=str(filename2))
     else:
         flash('Allowed image types are - png, jpg, jpeg, gif')
         return redirect(request.url)
 
 
+@app.route('/processes', methods=['POST', 'GET'])
+def test():
+    return ""
 # @app.route('/display/<filename>')
 # def display_image(filename):
 #     #print('display_image filename: ' + filename)

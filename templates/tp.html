@@ -25,36 +25,7 @@
             {% endif %}
             {% endwith %}
             </p>
-            <!-- {% if filename %}
-            <div>
-                <img src="{{ url_for('display_image', filename=filename) }}">
-            </div>
-            {% endif %} -->
-            <form id="formId" method="post" action="./" enctype="multipart/form-data">
-                <dl>
-                    <p>
-                    <h3>選擇變化圖</h3>
-                    </p>
-                    <p>
-                        <input type="file" name="file" class="form-control" autocomplete="off" required
-                            onchange="showImg(this)">
-                    </p>
-                    <p>
-                    <h3>風格</h3>
-                    </p>
-                    <p>
-                        <input type="file" name="file2" class="form-control" autocomplete="off" required
-                            onchange="showImg2(this)">
-                    </p>
 
-                    <p>
-                        <input type="Submit" name="send" value="送出" class="btn btn-info" onclick="sub()">
-
-                    </p>
-                </dl>
-
-
-            </form>
 
         </div>
     </div>
@@ -68,18 +39,19 @@
                 One of three columns
                 {% if filename != "" %}
 
-                <img id="showimg" src="{{ filename }}" />
+                <img id="showimg" src="{{ filename }}" alt="test" />
+
 
                 {% endif %}
-                <img id="showimg" src="" style="display:none;" />
+
             </div>
             <div class="col align-self-center">
                 One of three columns
                 {% if filename2 != "" %}
 
-                <img id="showimg" src="{{ filename2 }}" />
+                <img id="showimg" src="{{ filename2 }}" alt="test" />
                 {% endif %}
-                <img id="showimg2" src="" style="display:none;" />
+
             </div>
             <div class="col align-self-end">
                 One of three columns

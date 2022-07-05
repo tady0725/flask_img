@@ -24,3 +24,27 @@ function showImg2(thisimg) {
 	showimg2.style.display = 'block';
 	}
 }
+// function sub() {  
+// 	$.ajax({  
+// 			cache: true,  
+// 			type: "POST",  
+// 			url:"http://210.70.175.13:5000/processes",  
+// 			data:$('#formId').serialize(),// 你的formid  
+// 			async: false,  
+// 			error: function(request) {  
+// 				alert("Connection error:"+request.error);  
+// 			},  
+// 			success: function(response) {  
+			  
+// 			  $("#q1").html(response);
+// 				 $("#q3").html(response);
+// 				 $( "#q2" ).html(response);
+			
+				 
+			   
+
+// 				//alert("SUCCESS!");  
+// 			}  
+		   
+// 		});   
+// 	}
