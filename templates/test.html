@@ -23,6 +23,7 @@
                 {% endfor %}
             </ul>
             {% endif %}
+
             {% endwith %}
             </p>
             <!-- {% if filename %}
@@ -30,7 +31,7 @@
                 <img src="{{ url_for('display_image', filename=filename) }}">
             </div>
             {% endif %} -->
-            <form id="formId" method="post" action="./" enctype="multipart/form-data">
+            <form id="formId" method="post" enctype="multipart/form-data">
                 <dl>
                     <p>
                     <h3>選擇變化圖</h3>
@@ -47,9 +48,19 @@
                             onchange="showImg2(this)">
                     </p>
 
-                    <p>
-                        <input type="Submit" name="send" value="送出" class="btn btn-info" onclick="sub()">
+                    <!-- <p>
+                        <input type="Submit" name="sends" value="送出" class="btn btn-info">
+                    </p> -->
 
+                    <p>
+                        <!-- <input type="button" name="send" value="送出" onclick="sub()"> -->
+                        <button type='submit' name="send" value="送出" class="btn btn-info">上傳圖片</button>
+                        <!-- <input type="button" name="send" value="送出" class="btn btn-info"> -->
+                        <!-- onclick="sub()" -->
+
+                    </p>
+                    <p>
+                        <button type='button' class="btn btn-info" onclick="sub()">執行</button>
                     </p>
                 </dl>
 
@@ -63,26 +74,42 @@
 
 
     <div class="container">
+        <p>
+        <h3><a href="./">Home</a></h3>
+        </p>
         <div class="row">
             <div class="col align-self-start">
                 One of three columns
-                {% if filename != "" %}
 
-                <img id="showimg" src="{{ filename }}" />
+                {% if f1 != "" %}
+
+                <img id="showimg" src="{{ f1 }}" />
 
                 {% endif %}
+
                 <img id="showimg" src="" style="display:none;" />
             </div>
             <div class="col align-self-center">
                 One of three columns
-                {% if filename2 != "" %}
+                {% if f2 != "" %}
 
-                <img id="showimg" src="{{ filename2 }}" />
+                <img id="showimg" src="{{ f2 }} " />
+
                 {% endif %}
-                <img id="showimg2" src="" style="display:none;" />
+                <img id="showimg2" src="" style="display:none; " />
             </div>
             <div class="col align-self-end">
                 One of three columns
+                <p><a href="http://172.31.4.149:5000/static/generate/style.jpeg" target="_blank">link</a></p>
+                <div id='loader'>
+                    <img id="ig" src="static\\generate\\style.jpeg" width="300" height="300" style="display:none;" />
+
+                </div>
+
+
+
+
+
 
             </div>
         </div>

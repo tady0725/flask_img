@@ -8,57 +8,9 @@
 </head>
 
 <body>
-    <p>
-    <h1 align="center">Python Flask Upload and display image</h1>
-    </p>
-    <div class="container">
-        <div class="row">
-            <h2>Select a file to upload</h2>
-            <p>
-                {% with messages = get_flashed_messages() %}
-                {% if messages %}
-            <ul>
-                {% for message in messages %}
-                <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-            {% endwith %}
-            </p>
-
-
-        </div>
-    </div>
-
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col align-self-start">
-                One of three columns
-                {% if filename != "" %}
-
-                <img id="showimg" src="{{ filename }}" alt="test" />
-
-
-                {% endif %}
-
-            </div>
-            <div class="col align-self-center">
-                One of three columns
-                {% if filename2 != "" %}
-
-                <img id="showimg" src="{{ filename2 }}" alt="test" />
-                {% endif %}
-
-            </div>
-            <div class="col align-self-end">
-                One of three columns
-
-            </div>
-        </div>
-    </div>
+    <!-- <p>{{ f1 }}</p>
+    <p>{{ f2 }}</p> -->
+    <p id="t">{{ fs }}</p>
 
     <script src="./static/js/script.js"></script>
 
